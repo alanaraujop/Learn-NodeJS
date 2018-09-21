@@ -4,7 +4,10 @@
   "description": "APIs serão construidas utilizando o NodeJS com o Express a fim de aprender os conceitos e tecnicas.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel-node src/index.js",
+    "babel-debug": "babel-node index.js --debug",
+    "build": "babel src -d dist"
   },
   "repository": {
     "type": "git",
@@ -23,8 +26,15 @@
   },
   "homepage": "https://github.com/alantechsafe/Learn-NodeJS#readme",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "body-parser": "^1.18.3",
     "consign": "^0.1.6",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0"
   }
 }
